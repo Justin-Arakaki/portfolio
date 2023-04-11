@@ -1,3 +1,3 @@
-# frontend-template
+# portfolio
 
-For projects using Typescript, React, Jest, and Vite
+My personal webpage created using React.js, Typescript, and MUI.
