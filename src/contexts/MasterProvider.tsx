@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@mui/material';
 import { ReactNode } from 'react';
-import { WindowProvider } from './WindowContext';
 import defaultTheme from '../components/defaultTheme';
+import { WindowProvider } from './WindowContext';
 
 interface Props {
 	children: ReactNode;
