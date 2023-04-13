@@ -1,0 +1,22 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": true,
+  "printWidth": 80,
+  "importOrder": [
+    "^@mui",
+    "^react",
+    "\\/hooks\\/",
+    "\\/contexts\\/",
+    "\\/pages\\/",
+    "\\/layouts\\/",
+    "\\/components\\/",
+    "\\/utils\\/",
+    "\\/services\\/",
+    "\\/config\\/",
+    "\\/assets\\/",
+    "\\.scss$",
+    "\\.css$"
+  ]
+}
