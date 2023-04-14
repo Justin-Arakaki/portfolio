@@ -1,4 +1,4 @@
-import BodyContainer from '../ui/BodyContainer';
+import BodyContainer from '../components/ui/BodyContainer';
 import SamplePage from './SamplePage';
 
 export default function Contact() {

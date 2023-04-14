@@ -1,4 +1,4 @@
 {
-	"testEnvironment": "jsdom",
-	"testPathIgnorePatterns": ["/__helpers__/", "/__constants__/"]
+  "testEnvironment": "jsdom",
+  "testPathIgnorePatterns": ["/__helpers__/", "/__constants__/"]
 }

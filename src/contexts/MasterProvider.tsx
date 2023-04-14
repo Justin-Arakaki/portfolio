@@ -1,7 +1,8 @@
-import { WindowProvider } from './WindowContext';
-import { ThemeProvider } from '@mui/material';
 import { ReactNode } from 'react';
+import { ThemeProvider } from '@mui/material/styles';
 import defaultTheme from '../components/defaultTheme';
+import { SiteDataProvider } from './SiteDataContext';
+import { WindowProvider } from './WindowContext';
 
 interface Props {
   children: ReactNode;
@@ -10,7 +11,9 @@ interface Props {
 export default function MasterProvider({ children }: Props) {
   return (
     <WindowProvider>
-      <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>
+      <SiteDataProvider>
+        <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>
+      </SiteDataProvider>
     </WindowProvider>
   );
 }

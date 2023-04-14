@@ -1,5 +1,7 @@
 import { createTheme } from '@mui/material';
 
+const mono = 'Source Code Pro';
+const sans = 'Montserrat';
 const defaultTheme = createTheme({
   breakpoints: {
     values: {
@@ -12,29 +14,30 @@ const defaultTheme = createTheme({
   },
   palette: {
     primary: {
-      main: '#66FCF1',
+      main: '#66fcf1',
     },
     secondary: {
-      main: '#FFF',
+      main: '#45a29e',
     },
     text: {
-      primary: '#C5C6C7',
-      secondary: '#66FCF1',
+      primary: '#c5c6c7',
+      secondary: '#ffffff',
     },
     background: {
-      paper: '#1F2833',
-      default: '#0B0C10',
+      paper: '#1f2833',
+      default: '#0b0c10',
     },
   },
   typography: {
-    fontFamily: 'Montserrat',
+    fontFamily: sans,
     button: {
-      fontWeight: 200,
-      fontSize: '1.175rem',
+      fontFamily: mono,
+      fontWeight: 400,
+      fontSize: '1rem',
       textTransform: 'none',
     },
     h1: {
-      fontWeight: 500,
+      fontWeight: 200,
       fontSize: '4rem',
       '@media (max-width:600px)': {
         fontSize: '2rem',
@@ -45,19 +48,20 @@ const defaultTheme = createTheme({
       fontSize: '2.5rem',
     },
     h3: {
-      fontWeight: 200,
+      fontWeight: 400,
       fontSize: '1.625rem',
     },
     h4: {
+      fontFamily: mono,
       fontWeight: 400,
       fontSize: '1.175rem',
     },
     body1: {
-      fontWeight: 400,
+      fontWeight: 200,
       fontSize: '1.25rem',
     },
     body2: {
-      fontWeight: 400,
+      fontWeight: 200,
       fontSize: '1rem',
     },
   },

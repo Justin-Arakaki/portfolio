@@ -5,8 +5,9 @@
   "semi": true,
   "printWidth": 80,
   "importOrder": [
-    "^@mui",
     "^react",
+    "^@mui/material",
+    "^@mui/icons",
     "\\/hooks\\/",
     "\\/contexts\\/",
     "\\/pages\\/",
@@ -14,8 +15,11 @@
     "\\/components\\/",
     "\\/utils\\/",
     "\\/services\\/",
+    "\\/constants\\/",
     "\\/config\\/",
     "\\/assets\\/",
+    "^./",
+    "^../",
     "\\.scss$",
     "\\.css$"
   ]
