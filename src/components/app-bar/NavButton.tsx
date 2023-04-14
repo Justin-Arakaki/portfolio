@@ -17,7 +17,7 @@ export default function NavButton({
   const location = useLocation();
   const isToggledOn = location.pathname === `/${link}`;
   const toggledStyle: SxProps<Theme> = {
-    color: (theme: Theme) => theme.palette.secondary.main,
+    color: (theme: Theme) => theme.palette.primary.main,
   };
   const untoggledStyle: SxProps<Theme> = {
     transition: '0.5s',

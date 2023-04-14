@@ -24,7 +24,7 @@ export default function Header() {
       <ElevationScroll>
         <AppBar sx={appBarStyle}>
           <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <Typography variant="h3" color="secondary">
+            <Typography variant="h3" color="primary">
               JA
             </Typography>
             {navigationType}

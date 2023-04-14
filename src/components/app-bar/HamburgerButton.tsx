@@ -10,7 +10,7 @@ export default function HamburgerButton({ onClick }: Props) {
     <IconButton
       disableRipple
       disableTouchRipple
-      color="secondary"
+      color="primary"
       aria-label="open drawer"
       onClick={onClick}
       edge="start"
