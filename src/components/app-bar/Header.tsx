@@ -31,7 +31,7 @@ export default function Header() {
           </Toolbar>
         </AppBar>
       </ElevationScroll>
-      <Spacer size="large" />
+      <Spacer size="xlarge" />
     </>
   );
 }

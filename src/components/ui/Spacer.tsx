@@ -18,6 +18,9 @@ export default function Spacer({ size }: Props) {
     case 'large':
       margin = 8;
       break;
+    case 'xlarge':
+      margin = 16;
+      break;
     default:
       margin = 0;
   }
