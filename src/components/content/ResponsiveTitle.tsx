@@ -1,14 +1,16 @@
 import { Box, SxProps, Theme, Typography, useTheme } from '@mui/material';
+import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 import calcResponsiveFontSize from '../../utils/calcResponsiveFontSize';
 
 export default function ResponsiveTitle() {
   const windowWidth = useWindow();
   const theme = useTheme();
+  const { content } = useSiteData().pages.aboutme;
   const titleBoxStyle: SxProps<Theme> = {
     marginLeft: '2rem',
-    [theme.breakpoints.down('sm')]: { ml: 0 },
-    [theme.breakpoints.up('lg')]: { ml: '8rem' },
+    [theme.breakpoints.down('sm')]: { marginLeft: 0 },
+    [theme.breakpoints.up('lg')]: { marginLeft: '4rem' },
   };
   const baseWindow = theme.breakpoints.values.md;
   const h1FontSize = String(theme.typography.h1.fontSize);
@@ -27,10 +29,10 @@ export default function ResponsiveTitle() {
   return (
     <Box sx={titleBoxStyle}>
       <Typography variant="h1" color="primary" fontSize={nameFontSize}>
-        Justin Arakaki
+        {content.name}
       </Typography>
       <Typography variant="h2" color="text.secondary" fontSize={titleFontSize}>
-        a web developer.
+        {content.title}
       </Typography>
     </Box>
   );

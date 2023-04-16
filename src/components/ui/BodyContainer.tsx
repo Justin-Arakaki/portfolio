@@ -6,10 +6,8 @@ const BodyContainer = styled(Container)<ContainerProps>(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  maxWidth: 900,
+  maxWidth: 800,
   paddingInline: '2.5rem !important',
-  [theme.breakpoints.down('sm')]: { maxWidth: 500 },
-  [theme.breakpoints.up('lg')]: { maxWidth: 900 },
 }));
 
 export default BodyContainer;

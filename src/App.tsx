@@ -17,11 +17,14 @@ function App() {
       <Header />
       <BodyContainer>
         <Routes>
-          <Route path="*" element={<Navigate to={pages[0].path} replace />} />
-          <Route path={pages[0].path} element={<AboutMe />} />
-          <Route path={pages[1].path} element={<Projects />} />
-          <Route path={pages[2].path} element={<Resume />} />
-          <Route path={pages[3].path} element={<Contact />} />
+          <Route
+            path="*"
+            element={<Navigate to={pages.aboutme.path} replace />}
+          />
+          <Route path={pages.aboutme.path} element={<AboutMe />} />
+          <Route path={pages.projects.path} element={<Projects />} />
+          <Route path={pages.resume.path} element={<Resume />} />
+          <Route path={pages.contact.path} element={<Contact />} />
         </Routes>
       </BodyContainer>
     </MasterProvider>

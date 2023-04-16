@@ -19,7 +19,8 @@ export default function NavStack({
   handleClose,
 }: Props) {
   const { pages } = useSiteData();
-  const buttons = pages.map((page, index) => (
+  const pageInfo = [pages.aboutme, pages.projects, pages.resume, pages.contact];
+  const buttons = pageInfo.map((page, index) => (
     <NavButton
       label={page.label}
       link={page.path}

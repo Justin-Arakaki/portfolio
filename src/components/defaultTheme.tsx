@@ -46,6 +46,7 @@ const defaultTheme = createTheme({
       fontSize: '3.5rem',
     },
     h3: {
+      fontFamily: mono,
       fontWeight: 400,
       fontSize: '1.625rem',
     },
@@ -55,12 +56,12 @@ const defaultTheme = createTheme({
       fontSize: '1.175rem',
     },
     body1: {
-      fontWeight: 200,
-      fontSize: '1.25rem',
+      fontWeight: 300,
+      fontSize: '1rem',
     },
     body2: {
       fontWeight: 200,
-      fontSize: '1rem',
+      fontSize: '1.175rem',
     },
   },
 });

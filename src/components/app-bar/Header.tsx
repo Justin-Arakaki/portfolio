@@ -25,7 +25,7 @@ export default function Header() {
         <AppBar sx={appBarStyle}>
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             <Typography variant="h3" color="primary">
-              JA
+              just_
             </Typography>
             {navigationType}
           </Toolbar>
