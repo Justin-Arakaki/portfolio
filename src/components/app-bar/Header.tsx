@@ -3,7 +3,6 @@ import { useWindow } from '../../contexts/WindowContext';
 import CustyDrawer from './CustyDrawer';
 import ElevationScroll from './ElevationScroll';
 import NavStack from './NavStack';
-import Spacer from '../ui/Spacer';
 
 export default function Header() {
   const windowWidth = useWindow();
@@ -31,7 +30,6 @@ export default function Header() {
           </Toolbar>
         </AppBar>
       </ElevationScroll>
-      <Spacer size="xlarge" />
     </>
   );
 }
