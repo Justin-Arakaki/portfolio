@@ -1,5 +1,6 @@
 import { ResponsiveStyleValue } from '@mui/system/styleFunctionSx';
 import { SxProps, Theme, Stack } from '@mui/material';
+import useHash from '../../hooks/useHash';
 import { useSiteData } from '../../contexts/SiteDataContext';
 import NavButton from './NavButton';
 
@@ -19,12 +20,15 @@ export default function NavStack({
   handleClose,
 }: Props) {
   const { pages } = useSiteData();
+  const hash = useHash();
+
   const pageInfo = [pages.aboutme, pages.projects, pages.resume, pages.contact];
   const buttons = pageInfo.map((page, index) => (
     <NavButton
       label={page.label}
       link={page.link}
       handleClose={handleClose}
+      isToggledOn={hash === `#${page.link}`}
       key={index}
       listNo={index + 1}
     />

@@ -4,6 +4,7 @@ interface ButtonProps {
   label: string;
   link: string;
   listNo?: number;
+  isToggledOn?: boolean;
   handleClose?: () => void;
 }
 
@@ -11,10 +12,10 @@ export default function NavButton({
   label,
   link,
   listNo,
+  isToggledOn,
   handleClose,
 }: ButtonProps) {
-  // const location = useLocation();
-  const isToggledOn = false;
+  const hashLink = `#${link}`;
   const toggledStyle: SxProps<Theme> = {
     color: 'primary.main',
   };
@@ -32,7 +33,7 @@ export default function NavButton({
       <ButtonBase
         disableRipple={true}
         sx={buttonStyle}
-        href={`#${link}`}
+        href={hashLink}
         onClick={handleClose}
       >
         <Typography variant="button">{label}</Typography>
