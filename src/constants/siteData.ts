@@ -1,7 +1,7 @@
 const siteData = {
   pages: {
     aboutme: {
-      path: 'aboutme',
+      link: 'aboutme',
       label: 'About Me',
       content: {
         name: 'Justin Arakaki',
@@ -12,15 +12,15 @@ const siteData = {
       },
     },
     projects: {
-      path: 'projects',
+      link: 'projects',
       label: 'Projects',
     },
     resume: {
-      path: 'resume',
+      link: 'resume',
       label: 'Resume',
     },
     contact: {
-      path: 'contact',
+      link: 'contact',
       label: 'Contact',
     },
   },

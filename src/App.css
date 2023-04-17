@@ -13,19 +13,23 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #dcdcdc;
+  background: #00000000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #323232;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #404040;
+  background: #c5c6c7;
 }

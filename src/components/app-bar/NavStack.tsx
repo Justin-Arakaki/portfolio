@@ -23,7 +23,7 @@ export default function NavStack({
   const buttons = pageInfo.map((page, index) => (
     <NavButton
       label={page.label}
-      link={page.path}
+      link={page.link}
       handleClose={handleClose}
       key={index}
       listNo={index + 1}

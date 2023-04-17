@@ -1,5 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
-import { SxProps, Theme, Box, ButtonBase, Typography } from '@mui/material';
+import { Box, ButtonBase, SxProps, Theme, Typography } from '@mui/material';
 
 interface ButtonProps {
   label: string;
@@ -14,16 +13,14 @@ export default function NavButton({
   listNo,
   handleClose,
 }: ButtonProps) {
-  const location = useLocation();
-  const isToggledOn = location.pathname === `/${link}`;
+  // const location = useLocation();
+  const isToggledOn = false;
   const toggledStyle: SxProps<Theme> = {
-    color: (theme: Theme) => theme.palette.primary.main,
+    color: 'primary.main',
   };
   const untoggledStyle: SxProps<Theme> = {
     transition: '0.5s',
-    ['&:hover']: {
-      color: (theme: Theme) => theme.palette.text.secondary,
-    },
+    ['&:hover']: { color: 'text.secondary' },
   };
   const buttonStyle = isToggledOn ? toggledStyle : untoggledStyle;
 
@@ -33,10 +30,9 @@ export default function NavButton({
         {listNo}.
       </Typography>
       <ButtonBase
-        component={Link}
-        to={link}
         disableRipple={true}
         sx={buttonStyle}
+        href={`#${link}`}
         onClick={handleClose}
       >
         <Typography variant="button">{label}</Typography>

@@ -1,10 +1,11 @@
-import { Box, SxProps, Theme, Typography, useTheme } from '@mui/material';
+import { SxProps, Theme, Typography, useTheme } from '@mui/material';
 import { useSiteData } from '../contexts/SiteDataContext';
 import ResponsiveTitle from '../components/content/ResponsiveTitle';
+import Section from '../components/ui/Section';
 
 export default function AboutMe() {
   const theme = useTheme();
-  const { content } = useSiteData().pages.aboutme;
+  const { link, content } = useSiteData().pages.aboutme;
   const helloStyle: SxProps<Theme> = {
     marginBottom: '4rem',
     [theme.breakpoints.down('sm')]: { marginBottom: '2rem' },
@@ -18,7 +19,7 @@ export default function AboutMe() {
   };
 
   return (
-    <Box width="100%" mt={8}>
+    <Section id={link} sx={{ mt: '8rem' }}>
       <Typography variant="h4" sx={helloStyle}>
         {content.greeting}
       </Typography>
@@ -26,6 +27,6 @@ export default function AboutMe() {
       <Typography variant="body1" sx={blurbStyle}>
         {content.about}
       </Typography>
-    </Box>
+    </Section>
   );
 }

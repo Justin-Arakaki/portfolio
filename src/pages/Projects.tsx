@@ -1,10 +1,10 @@
-import BodyContainer from '../components/ui/BodyContainer';
+import { Box } from '@mui/material';
 import SamplePage from './SamplePage';
 
 export default function Projects() {
   return (
-    <BodyContainer>
+    <Box>
       <SamplePage title="Projects" />
-    </BodyContainer>
+    </Box>
   );
 }
