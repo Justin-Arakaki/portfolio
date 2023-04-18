@@ -1,16 +1,26 @@
-import { Box, SxProps, Theme, IconButton } from '@mui/material';
+import { Box, SxProps, Divider, Theme, IconButton } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { useWindow } from '../../contexts/WindowContext';
 
 export default function FloatingButtons() {
+  const windowWidth = useWindow();
+  if (windowWidth < 800) return null;
+
   const floatingBoxStyle: SxProps<Theme> = {
-    position: 'fixed',
-    bottom: '3rem',
-    right: '3rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    position: 'fixed',
+    bottom: 0,
+    right: '2rem',
+  };
+  const lineStyle: SxProps<Theme> = {
+    backgroundColor: 'primary.main',
+    height: '20vh',
+    width: '1px',
+    marginTop: '0.5rem',
   };
   const iconStyle: SxProps<Theme> = {
     color: 'text.primary',
@@ -47,5 +57,10 @@ export default function FloatingButtons() {
     );
   });
 
-  return <Box sx={floatingBoxStyle}>{buttons}</Box>;
+  return (
+    <Box sx={floatingBoxStyle}>
+      {buttons}
+      <Box sx={lineStyle} />
+    </Box>
+  );
 }
