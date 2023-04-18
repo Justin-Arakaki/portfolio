@@ -1,6 +1,6 @@
 import { Box, SxProps, Theme, Typography } from '@mui/material';
 import { useSiteData } from '../contexts/SiteDataContext';
-import ProjectCard from '../components/content/ProjectCard';
+import ProjectCard from '../components/project-card/ProjectCard';
 import Section from '../components/ui/Section';
 
 export default function Projects() {
@@ -17,6 +17,7 @@ export default function Projects() {
       description={info.description}
       image={info.image}
       demoUrl={info.demoUrl}
+      ghUrl={info.ghUrl}
       technologies={info.technologies}
       key={index}
     />
