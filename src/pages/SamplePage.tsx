@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
 export default function SamplePage({ title }: Props) {

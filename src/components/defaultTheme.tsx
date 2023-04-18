@@ -25,7 +25,7 @@ const defaultTheme = createTheme({
       secondary: '#ffffff',
     },
     background: {
-      paper: '#1f2833',
+      paper: '#000000',
       default: '#0b0c10',
     },
   },
@@ -55,8 +55,12 @@ const defaultTheme = createTheme({
       fontWeight: 400,
       fontSize: '1.175rem',
     },
+    h5: {
+      fontWeight: 200,
+      fontSize: '1.175rem',
+    },
     body1: {
-      fontWeight: 300,
+      fontWeight: 200,
       fontSize: '1rem',
     },
     body2: {

@@ -14,7 +14,7 @@ function App() {
     flexDirection: 'column',
     alignItems: 'center',
     gap: '20vh',
-    maxWidth: 800,
+    maxWidth: '800px !important',
     paddingInline: '2.5rem !important',
   };
 

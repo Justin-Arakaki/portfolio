@@ -19,7 +19,7 @@ export default function AboutMe() {
   };
 
   return (
-    <Section id={link} sx={{ pt: '16rem' }}>
+    <Section id={link} sx={{ pt: '30vh' }}>
       <Typography variant="h4" sx={helloStyle}>
         {content.greeting}
       </Typography>
