@@ -22,7 +22,7 @@ const siteData = {
       pageNum: 2,
       label: 'Projects',
       content: {
-        blurb: 'Not talented. Just a hard worker.',
+        blurb: 'Personal and professional work.',
       },
       list: [
         {

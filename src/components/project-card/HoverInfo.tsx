@@ -1,4 +1,5 @@
-import { Box, Stack, SxProps, Theme, Typography, Button } from '@mui/material';
+import { Box, Stack, SxProps, Theme, Typography } from '@mui/material';
+import DemoButton from './DemoButton';
 
 interface HoverInfoProps {
   title: string;
@@ -16,11 +17,12 @@ export default function HoverInfo({
   demoUrl,
 }: HoverInfoProps) {
   const isDisabled: boolean = demoUrl ? false : true;
+
   const techBubbleStyle: SxProps<Theme> = {
     borderColor: 'primary.main',
     borderStyle: 'solid',
     borderWidth: 1,
-    borderRadius: 2,
+    borderRadius: 10,
     paddingInline: 1,
   };
   const bubbleBoxStyle: SxProps<Theme> = {
@@ -35,6 +37,7 @@ export default function HoverInfo({
     height: '100%',
     width: '100%',
   };
+
   const techBubbles = technologies.map((value, index) => {
     return (
       <Box key={index} sx={techBubbleStyle}>
@@ -55,25 +58,10 @@ export default function HoverInfo({
         <Box sx={bubbleBoxStyle}>{techBubbles}</Box>
       </Stack>
       <Box display="flex" justifyContent="right" gap={1}>
-        <Button
-          disableFocusRipple
-          disableTouchRipple
-          variant="outlined"
-          color="primary"
-          href={demoUrl}
-          disabled={isDisabled}
-        >
+        <DemoButton href={demoUrl} disabled={isDisabled}>
           Demo
-        </Button>
-        <Button
-          disableFocusRipple
-          disableTouchRipple
-          variant="outlined"
-          color="primary"
-          href={ghUrl}
-        >
-          GitHub
-        </Button>
+        </DemoButton>
+        <DemoButton href={ghUrl}>GitHub</DemoButton>
       </Box>
     </Box>
   );

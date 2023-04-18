@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Card, CardContent, CardMedia, SxProps, Theme } from '@mui/material';
+import { useWindow } from '../../contexts/WindowContext';
 import HoverInfo from './HoverInfo';
 import MainInfo from './MainInfo';
 
@@ -20,6 +21,8 @@ export default function ProjectCard({
   ghUrl,
   technologies,
 }: ProjectCardProps) {
+  const windowWidth = useWindow();
+  const isLargeWindow = windowWidth > 700;
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseOver = () => {
     setIsHovered(true);
@@ -31,18 +34,18 @@ export default function ProjectCard({
   const cardStyle: SxProps<Theme> = {
     display: 'flex',
     flexDirection: 'column',
-    width: 'calc(50% - 0.5rem)',
-    height: 300,
+    width: isLargeWindow ? 'calc(50% - 0.5rem)' : '100%',
+    height: isLargeWindow ? 300 : '50vh',
     borderRadius: 5,
     backgroundColor: 'paper',
     boxShadow: 'none',
   };
   const imageStyle: SxProps<Theme> = {
-    height: isHovered ? '10%' : '70%',
+    height: isHovered ? '0%' : '70%',
     transition: '0.25s',
   };
   const contentStyle: SxProps<Theme> = {
-    height: isHovered ? '90%' : '30%',
+    height: isHovered ? '100%' : '30%',
     transition: '0.25s',
   };
 
