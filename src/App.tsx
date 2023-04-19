@@ -1,9 +1,9 @@
 import { Container, SxProps } from '@mui/material';
 import MasterProvider from './contexts/MasterProvider';
-import AboutMe from './pages/AboutMe';
-import Contact from './pages/Contact';
-import Projects from './pages/Projects';
-import Resume from './pages/Resume';
+import AboutMe from './pages/aboutme/AboutMe';
+import Contact from './pages/contact/Contact';
+import Projects from './pages/projects/Projects';
+import Resume from './pages/resume/Resume';
 import Header from './components/app-bar/Header';
 import FloatingButtons from './components/floating-buttons/FloatingButtons';
 import './App.css';

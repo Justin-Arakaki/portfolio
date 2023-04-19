@@ -1,7 +1,7 @@
 import { SxProps, Theme, Typography, useTheme } from '@mui/material';
-import { useSiteData } from '../contexts/SiteDataContext';
-import ResponsiveTitle from '../components/content/ResponsiveTitle';
-import Section from '../components/ui/Section';
+import { useSiteData } from '../../contexts/SiteDataContext';
+import ResponsiveTitle from '../../components/content/ResponsiveTitle';
+import Section from '../../components/ui/Section';
 
 export default function AboutMe() {
   const theme = useTheme();

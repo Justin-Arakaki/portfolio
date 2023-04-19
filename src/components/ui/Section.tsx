@@ -22,7 +22,7 @@ export default function Section({
   };
   const title =
     pageNum && label ? (
-      <Box display="flex" gap={1} alignItems="flex-end">
+      <Box display="flex" gap={1} alignItems="flex-end" mb={2}>
         <Typography variant="h4" color="secondary">
           {pageNum}.
         </Typography>

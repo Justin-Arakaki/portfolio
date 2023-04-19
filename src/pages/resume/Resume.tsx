@@ -1,6 +1,6 @@
-import { useSiteData } from '../contexts/SiteDataContext';
-import Section from '../components/ui/Section';
-import SamplePage from './SamplePage';
+import { useSiteData } from '../../contexts/SiteDataContext';
+import Section from '../../components/ui/Section';
+import SamplePage from '../SamplePage';
 
 export default function Resume() {
   const { link, pageNum, label } = useSiteData().pages.resume;
