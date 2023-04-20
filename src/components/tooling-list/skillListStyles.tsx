@@ -2,7 +2,7 @@
 import { SxProps, Theme } from '@mui/material';
 import { useWindow } from '../../contexts/WindowContext';
 
-export const toolingItem: SxProps<Theme> = (theme) => {
+export const skillItem: SxProps<Theme> = (theme) => {
   const windowWidth = useWindow();
 
   let width;
@@ -33,7 +33,7 @@ export const iconCorrection: SxProps<Theme> = {
   paddingTop: '2px',
 };
 
-export const toolingWrapperStyle: SxProps<Theme> = {
+export const skillWrapperStyle: SxProps<Theme> = {
   borderRadius: 5,
   backgroundColor: 'background.paper',
   marginTop: '1rem',
@@ -41,7 +41,7 @@ export const toolingWrapperStyle: SxProps<Theme> = {
   padding: '1rem',
 };
 
-export const toolingContainerStyle: SxProps<Theme> = {
+export const skillContainerStyle: SxProps<Theme> = {
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'space-between',

@@ -1,12 +1,3 @@
-import expressJsIcon from '../assets/icons/expressjs-icon.svg';
-import jestIcon from '../assets/icons/jest-icon.svg';
-import materialUiIcon from '../assets/icons/material-ui-icon.svg';
-import nodeJsIcon from '../assets/icons/nodejs-icon.svg';
-import postgreSqlIcon from '../assets/icons/postgresql-icon.svg';
-import puppeteerIcon from '../assets/icons/puppeteer-icon.svg';
-import reactJsIcon from '../assets/icons/reactjs-icon.svg';
-import sqlIcon from '../assets/icons/sql-icon.svg';
-import typescriptIcon from '../assets/icons/typescript-icon.svg';
 import aniCriticPic from '../assets/images/anicritic.png';
 import jobMarketAnalyzerPic from '../assets/images/job-market-analyzer.png';
 import truestreamPic from '../assets/images/truestream.png';
@@ -14,21 +5,10 @@ import yoshinagaPortfolioPic from '../assets/images/yoshinaga-portfolio.png';
 
 const projectData = {
   link: 'projects',
-  pageNum: 2,
+  pageNum: 3,
   label: 'Projects',
   content: {
     blurb: 'Personal and professional projects.',
-    tooling: [
-      ['TypeScript', typescriptIcon],
-      ['SQL', sqlIcon],
-      ['Node.js', nodeJsIcon],
-      ['React.js', reactJsIcon],
-      ['Express.js', expressJsIcon],
-      ['PostgreSQL', postgreSqlIcon],
-      ['Jest', jestIcon],
-      ['Puppeteer', puppeteerIcon],
-      ['Material-ui', materialUiIcon],
-    ],
   },
   list: [
     {

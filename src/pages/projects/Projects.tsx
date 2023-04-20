@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 import { useSiteData } from '../../contexts/SiteDataContext';
 import ProjectCard from '../../components/project-card/ProjectCard';
-import ToolingList from '../../components/tooling-list/ToolingList';
 import Section from '../../components/ui/Section';
 import { boxStyle } from './projectStyles';
 
@@ -22,7 +21,6 @@ export default function Projects() {
 
   return (
     <Section id={link} pageNum={pageNum} label={label}>
-      <ToolingList />
       <Box sx={boxStyle}>{projects}</Box>
     </Section>
   );

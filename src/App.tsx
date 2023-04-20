@@ -3,7 +3,7 @@ import MasterProvider from './contexts/MasterProvider';
 import AboutMe from './pages/aboutme/AboutMe';
 import Contact from './pages/contact/Contact';
 import Projects from './pages/projects/Projects';
-import Resume from './pages/resume/Resume';
+import Skills from './pages/skills/Skills';
 import Header from './components/app-bar/Header';
 import FloatingButtons from './components/floating-buttons/FloatingButtons';
 import './App.css';
@@ -23,8 +23,8 @@ function App() {
       <Header />
       <Container sx={bodyContainerStyle}>
         <AboutMe />
+        <Skills />
         <Projects />
-        <Resume />
         <Contact />
       </Container>
       <FloatingButtons />

@@ -22,7 +22,7 @@ export default function NavStack({
   const { pages } = useSiteData();
   const hash = useHash();
 
-  const pageInfo = [pages.aboutme, pages.projects, pages.resume, pages.contact];
+  const pageInfo = [pages.aboutme, pages.skills, pages.projects, pages.contact];
   const buttons = pageInfo.map((page, index) => (
     <NavButton
       label={page.label}
