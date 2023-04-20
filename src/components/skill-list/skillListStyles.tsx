@@ -36,8 +36,6 @@ export const iconCorrection: SxProps<Theme> = {
 export const skillListWrapperStyle: SxProps<Theme> = {
   borderRadius: 5,
   backgroundColor: 'background.paper',
-  marginTop: '1rem',
-  marginBottom: '1rem',
   padding: '1rem',
 };
 

@@ -16,6 +16,7 @@ function App() {
     gap: '20vh',
     maxWidth: '800px !important',
     paddingInline: '2.5rem !important',
+    marginBottom: '8rem',
   };
 
   return (

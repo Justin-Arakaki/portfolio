@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import defaultTheme from '../components/defaultTheme';
+import defaultTheme from '../components/themes/defaultTheme';
 import { SiteDataProvider } from './SiteDataContext';
 import { WindowProvider } from './WindowContext';
 

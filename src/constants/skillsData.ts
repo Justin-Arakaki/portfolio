@@ -20,7 +20,7 @@ const skillsData = {
   pageNum: 2,
   label: 'Stack',
   content: {
-    blurb: '',
+    blurb: 'I like data and design.',
     frontend: [
       { name: 'JavaScript ES6', icon: javascriptIcon, strength: 2 },
       { name: 'HTML5', icon: htmlIcon, strength: 2 },

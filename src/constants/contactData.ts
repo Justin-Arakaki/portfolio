@@ -1,13 +1,32 @@
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 const contactData = {
   link: 'contact',
   pageNum: 4,
   label: 'Contact',
   content: {
-    name: 'Justin Arakaki',
-    greeting: 'Hi there, my name is_',
-    title: 'a web developer.',
-    about:
-      'I am a former mechanical engineer turned software developer driven by a passion for creating functional and beautiful digital experiences. I like exploring new technologies and solving problems through code.',
+    blurb: "Let's get in touch!",
+    message:
+      "Thanks for visiting my portfolio. If you are looking for a enthusiastic and self-motivated web developer, please don't hesitate to reach out. Let's build something neat!",
   },
+  socials: [
+    {
+      title: 'Email',
+      link: 'mailto: Justin.r.arakaki7@gmail.com',
+      icon: EmailIcon,
+    },
+    {
+      title: 'GitHub',
+      link: 'https://github.com/Justin-Arakaki',
+      icon: GitHubIcon,
+    },
+    {
+      title: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/jrarakaki/',
+      icon: LinkedInIcon,
+    },
+  ],
 };
 export default contactData;
