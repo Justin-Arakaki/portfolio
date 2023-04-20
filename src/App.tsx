@@ -13,10 +13,10 @@ function App() {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '20vh',
+    gap: '25vh',
     maxWidth: '800px !important',
     paddingInline: '2.5rem !important',
-    marginBottom: '8rem',
+    marginBottom: '35vh',
   };
 
   return (
