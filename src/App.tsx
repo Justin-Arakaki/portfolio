@@ -1,4 +1,4 @@
-import { Container, SxProps } from '@mui/material';
+import { Container, SxProps, useTheme } from '@mui/material';
 import MasterProvider from './contexts/MasterProvider';
 import AboutMe from './pages/aboutme/AboutMe';
 import Contact from './pages/contact/Contact';
@@ -9,6 +9,7 @@ import FloatingButtons from './components/floating-buttons/FloatingButtons';
 import './App.css';
 
 function App() {
+  const theme = useTheme();
   const bodyContainerStyle: SxProps = {
     display: 'flex',
     flexDirection: 'column',
@@ -17,6 +18,7 @@ function App() {
     maxWidth: '800px !important',
     paddingInline: '2.5rem !important',
     marginBottom: '35vh',
+    [theme.breakpoints.down('sm')]: { marginBottom: '15vh' },
   };
 
   return (

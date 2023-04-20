@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Theme } from '@emotion/react';
-import { SxProps } from '@mui/material';
+import { SxProps, Theme } from '@mui/material';
 import { useWindow } from '../../contexts/WindowContext';
 
 export const cardStyle: SxProps<Theme> = () => {
@@ -14,6 +13,6 @@ export const cardStyle: SxProps<Theme> = () => {
     height: isLargeWindow ? 300 : '50vh',
     borderRadius: 5,
     backgroundColor: 'paper',
-    boxShadow: 'none',
+    boxShadow: (theme: Theme) => `0 0 0 1px ${theme.palette.secondary.main}`,
   };
 };

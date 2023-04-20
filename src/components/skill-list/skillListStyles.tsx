@@ -37,6 +37,7 @@ export const skillListWrapperStyle: SxProps<Theme> = {
   borderRadius: 5,
   backgroundColor: 'background.paper',
   padding: '1rem',
+  boxShadow: (theme: Theme) => `0 0 0 1px ${theme.palette.secondary.main}`,
 };
 
 export const skillContainerStyle: SxProps<Theme> = {
