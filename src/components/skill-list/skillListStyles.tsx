@@ -33,7 +33,7 @@ export const iconCorrection: SxProps<Theme> = {
   paddingTop: '2px',
 };
 
-export const skillWrapperStyle: SxProps<Theme> = {
+export const skillListWrapperStyle: SxProps<Theme> = {
   borderRadius: 5,
   backgroundColor: 'background.paper',
   marginTop: '1rem',

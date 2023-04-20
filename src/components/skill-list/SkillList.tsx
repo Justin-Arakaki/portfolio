@@ -6,17 +6,23 @@ import {
   iconCorrection,
   skillContainerStyle,
   skillItem,
-  skillWrapperStyle,
+  skillListWrapperStyle,
 } from './skillListStyles';
 
+interface Skill {
+  name: string;
+  icon: string | null;
+  strength: number;
+}
+
 interface SkillsListProps {
-  skills: string[];
+  skills: Skill[];
   header: string;
 }
 
 export default function SkillsList({ skills, header }: SkillsListProps) {
   const tooling = skills.map((skillInfo, index) => {
-    const svgIcon = skillInfo[1] ? skillInfo[1] : defaultIcon;
+    const svgIcon = skillInfo.icon ? skillInfo.icon : defaultIcon;
 
     return (
       <Box key={index} sx={skillItem}>
@@ -29,14 +35,14 @@ export default function SkillsList({ skills, header }: SkillsListProps) {
           />
         </Box>
         <Typography variant="body1" color="text.secondary">
-          {skillInfo[0]}
+          {skillInfo.name}
         </Typography>
       </Box>
     );
   });
 
   return (
-    <Box sx={skillWrapperStyle}>
+    <Box sx={skillListWrapperStyle}>
       <Divider light={true} sx={dividerStyle}>
         <Typography variant="h5" color="text.secondary">
           {header}
