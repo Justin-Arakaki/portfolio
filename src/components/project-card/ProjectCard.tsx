@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Card, CardContent, CardMedia, SxProps, Theme } from '@mui/material';
+import useClickOut from '../../hooks/useClickOut';
 import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 import HoverInfo from './HoverInfo';
@@ -26,6 +27,7 @@ export default function ProjectCard({
   const windowWidth = useWindow();
   const { windowBp } = useSiteData();
   const isLargeWindow = windowWidth > windowBp.projectCardBp;
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const [isPulledUp, setIsPulledUp] = useState(false);
   const handleMouseOver = () => {
@@ -40,6 +42,11 @@ export default function ProjectCard({
     if (isLargeWindow) return;
     setIsPulledUp(!isPulledUp);
   };
+  const handleTouchOut = () => {
+    if (isLargeWindow) return;
+    setIsPulledUp(false);
+  };
+  useClickOut(wrapperRef, handleTouchOut);
 
   const imageStyle: SxProps<Theme> = {
     height: isPulledUp ? '0%' : '70%',
@@ -67,6 +74,7 @@ export default function ProjectCard({
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       onClick={handleTouch}
+      ref={wrapperRef}
       sx={cardStyle}
     >
       <CardMedia image={image} title={title} sx={imageStyle} />
