@@ -1,4 +1,4 @@
-import { Box, Typography, SxProps, Theme } from '@mui/material';
+import { Box, Typography, SxProps, Theme, useTheme } from '@mui/material';
 
 interface SectionProps {
   id: string;
@@ -13,11 +13,17 @@ export default function Section({
   pageNum,
   label,
   children,
-  sx,
+  sx: sx,
 }: SectionProps) {
+  const theme = useTheme();
   const sectionStyle: SxProps<Theme> = {
     width: '100%',
-    paddingTop: '8rem',
+    paddingTop: '12vh',
+    paddingBottom: '33vh',
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '4rem',
+      paddingBottom: 0,
+    },
     ...sx,
   };
   const title =

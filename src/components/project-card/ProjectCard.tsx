@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Card, CardContent, CardMedia, SxProps, Theme } from '@mui/material';
+import { useSiteData } from '../../contexts/SiteDataContext';
+import { useWindow } from '../../contexts/WindowContext';
 import HoverInfo from './HoverInfo';
 import MainInfo from './MainInfo';
 import { cardStyle } from './projectCardStyles';
@@ -21,24 +23,34 @@ export default function ProjectCard({
   ghUrl,
   technologies,
 }: ProjectCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
+  const windowWidth = useWindow();
+  const { windowBp } = useSiteData();
+  const isLargeWindow = windowWidth > windowBp.projectCardBp;
+
+  const [isPulledUp, setIsPulledUp] = useState(false);
   const handleMouseOver = () => {
-    setIsHovered(true);
+    if (!isLargeWindow) return;
+    setIsPulledUp(true);
   };
   const handleMouseOut = () => {
-    setIsHovered(false);
+    if (!isLargeWindow) return;
+    setIsPulledUp(false);
+  };
+  const handleTouch = () => {
+    if (isLargeWindow) return;
+    setIsPulledUp(!isPulledUp);
   };
 
   const imageStyle: SxProps<Theme> = {
-    height: isHovered ? '0%' : '70%',
+    height: isPulledUp ? '0%' : '70%',
     transition: '0.25s',
   };
   const contentStyle: SxProps<Theme> = {
-    height: isHovered ? '100%' : '30%',
+    height: isPulledUp ? '100%' : '30%',
     transition: '0.25s',
   };
 
-  const content = isHovered ? (
+  const content = isPulledUp ? (
     <HoverInfo
       title={title}
       description={description}
@@ -54,6 +66,7 @@ export default function ProjectCard({
     <Card
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
+      onClick={handleTouch}
       sx={cardStyle}
     >
       <CardMedia image={image} title={title} sx={imageStyle} />

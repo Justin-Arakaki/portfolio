@@ -8,7 +8,7 @@ const defaultTheme = createTheme({
     values: {
       xs: 0,
       sm: 500,
-      md: 900,
+      md: 780,
       lg: 1200,
       xl: 1536,
     },

@@ -1,20 +1,21 @@
 import hexRgb from 'hex-rgb';
 import { AppBar, SxProps, Theme, Toolbar, Typography } from '@mui/material';
+import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 import CustyDrawer from './CustyDrawer';
 import ElevationScroll from './ElevationScroll';
 import NavStack from './NavStack';
 
 export default function Header() {
+  const { windowBp } = useSiteData();
   const windowWidth = useWindow();
   const navigationType =
-    windowWidth < 700 ? (
+    windowWidth < windowBp.drawerBp ? (
       <CustyDrawer />
     ) : (
       <NavStack direction="row" spacing={4} />
     );
   const appBarStyle: SxProps<Theme> = {
-    position: 'fixed',
     color: 'text.primary',
     bgcolor: (theme: Theme) => {
       const color = theme.palette.background.default;

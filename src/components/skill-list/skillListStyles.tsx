@@ -1,30 +1,21 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { SxProps, Theme } from '@mui/material';
+import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 
 export const skillItem: SxProps<Theme> = (theme) => {
   const windowWidth = useWindow();
-
-  let width;
-  switch (true) {
-    case windowWidth < 460:
-      width = '100%';
-      break;
-    case 460 <= windowWidth && windowWidth < 580:
-      width = '45%';
-      break;
-    default:
-      width = '30%';
-      break;
-  }
+  const { skillItemBp } = useSiteData().windowBp;
+  const isLargeWindow = windowWidth > skillItemBp;
 
   return {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: '1rem',
+    gap: isLargeWindow ? '1rem' : '0.5rem',
     height: 40,
-    width: width,
+    width: isLargeWindow ? '30%' : '48%',
+    minWidth: 145,
   };
 };
 

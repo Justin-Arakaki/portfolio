@@ -1,5 +1,6 @@
 import { Theme } from '@emotion/react';
 import { SxProps } from '@mui/material';
+import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 
 export const iconStyle: SxProps<Theme> = {
@@ -17,7 +18,8 @@ export const socialsWrapperStyle: SxProps<Theme> = {
 
 export const iconButtonStyle: SxProps<Theme> = () => {
   const windowWidth = useWindow();
-  const isLargeWindow = windowWidth > 680;
+  const { windowBp } = useSiteData();
+  const isLargeWindow = windowWidth > windowBp.contactsBp;
 
   return {
     display: 'flex',

@@ -8,9 +8,11 @@ import {
 } from './floatingButtonsStyles';
 
 export default function FloatingButtons() {
-  const { socials } = useSiteData().pages.contact;
+  const { pages, windowBp: windowBreakpoints } = useSiteData();
+  const { socials } = pages.contact;
   const windowWidth = useWindow();
-  if (windowWidth < 800) return null;
+
+  if (windowWidth < windowBreakpoints.floatingButtonsBp) return null;
 
   const buttons = socials.map((info, index) => {
     const SocialIcon = info.icon;

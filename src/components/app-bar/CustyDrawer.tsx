@@ -20,6 +20,7 @@ export default function CustyDrawer() {
     },
   };
   const navStackStyle: SxProps<Theme> = {
+    marginTop: '2rem',
     alignItems: 'center',
   };
 
@@ -34,7 +35,7 @@ export default function CustyDrawer() {
         sx={drawerStyle}
       >
         <NavStack
-          spacing={1}
+          spacing={4}
           handleClose={handleDrawerClose}
           sx={navStackStyle}
         />
