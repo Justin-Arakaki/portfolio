@@ -37,7 +37,7 @@ const projectData = {
     {
       title: 'Yoshinaga Portfolio',
       description:
-        "Paid freelance project for an animator's portfolio based on a given design",
+        "Freelance project for an animator's portfolio based on a given design",
       image: yoshinagaPortfolioPic,
       demoUrl:
         'https://justin-arakaki.github.io/nicole-yoshinaga-website/#/animation',
@@ -47,7 +47,7 @@ const projectData = {
     {
       title: 'AniCritic',
       description:
-        'Frontend web app that allows users to track and review series using an api',
+        'Frontend web app that allows users to track, search, and review anime',
       image: aniCriticPic,
       demoUrl: 'https://justin-arakaki.github.io/anicritic/',
       ghUrl: 'https://github.com/Justin-Arakaki/anicritic',

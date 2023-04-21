@@ -1,5 +1,10 @@
-import { Box, Stack, SxProps, Theme, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import DemoButton from './DemoButton';
+import {
+  bubbleBoxStyle,
+  containerStyle,
+  techBubbleStyle,
+} from './projectCardStyles';
 
 interface HoverInfoProps {
   title: string;
@@ -17,26 +22,6 @@ export default function HoverInfo({
   demoUrl,
 }: HoverInfoProps) {
   const isDisabled: boolean = demoUrl ? false : true;
-
-  const techBubbleStyle: SxProps<Theme> = {
-    borderColor: 'primary.main',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderRadius: 10,
-    paddingInline: 1,
-  };
-  const bubbleBoxStyle: SxProps<Theme> = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '0.5rem',
-  };
-  const containerStyle: SxProps<Theme> = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    height: '100%',
-    width: '100%',
-  };
 
   const techBubbles = technologies.map((value, index) => {
     return (
