@@ -31,6 +31,7 @@ export default function NavStack({
       isToggledOn={hash === `#${page.link}`}
       key={index}
       listNo={index + 1}
+      delay={index + 1}
     />
   ));
 

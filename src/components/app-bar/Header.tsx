@@ -1,10 +1,19 @@
+import { motion } from 'framer-motion';
 import hexRgb from 'hex-rgb';
-import { AppBar, SxProps, Theme, Toolbar, Typography } from '@mui/material';
+import {
+  AppBar,
+  SxProps,
+  Theme,
+  Toolbar,
+  Typography,
+  Button,
+} from '@mui/material';
 import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 import CustyDrawer from './CustyDrawer';
 import ElevationScroll from './ElevationScroll';
 import NavStack from './NavStack';
+import FadeIn from '../animations/FadeIn';
 
 export default function Header() {
   const { windowBp } = useSiteData();
@@ -28,9 +37,11 @@ export default function Header() {
     <ElevationScroll>
       <AppBar sx={appBarStyle}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Typography variant="h3" color="primary">
-            just_
-          </Typography>
+          <FadeIn>
+            <Typography variant="h3" color="primary">
+              just_
+            </Typography>
+          </FadeIn>
           {navigationType}
         </Toolbar>
       </AppBar>
