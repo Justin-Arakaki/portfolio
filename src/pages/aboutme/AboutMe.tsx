@@ -12,15 +12,15 @@ export default function AboutMe() {
   return (
     <Section id={link} sx={aboutMeWrapperStyle(theme)}>
       <Box sx={{ paddingInline: '1rem' }}>
-        <FadeIn delay={1.5}>
+        <FadeIn delay={1} animateOnVisible={false}>
           <Typography variant="h4" sx={helloStyle(theme)}>
             {content.greeting}
           </Typography>
         </FadeIn>
-        <FadeIn delay={1.6}>
+        <FadeIn delay={1.1} animateOnVisible={false}>
           <ResponsiveTitle />
         </FadeIn>
-        <FadeIn delay={1.7}>
+        <FadeIn delay={1.2} animateOnVisible={false}>
           <Typography variant="body1" sx={blurbStyle(theme)}>
             {content.about}
           </Typography>

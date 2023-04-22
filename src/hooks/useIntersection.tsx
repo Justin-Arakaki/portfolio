@@ -6,10 +6,13 @@ interface IntersectionOptionsProps {
   threshold?: number | number[];
 }
 
+// Only invokes once! Delete observer.unobserve(entry.target)
+// if necessary
+
 export default function useIntersection(
   ref: RefObject<Element>,
   options: IntersectionOptionsProps = {
-    rootMargin: '10px 10px',
+    rootMargin: '-100px',
     threshold: 1,
   }
 ) {
@@ -17,7 +20,10 @@ export default function useIntersection(
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(entry.isIntersecting);
+      if (entry.isIntersecting) {
+        setIsVisible(entry.isIntersecting);
+        observer.unobserve(entry.target);
+      }
     }, options);
 
     if (ref.current) {
@@ -29,7 +35,7 @@ export default function useIntersection(
         observer.unobserve(ref.current);
       }
     };
-  }, [ref, options]);
+  }, []);
 
   return isVisible;
 }

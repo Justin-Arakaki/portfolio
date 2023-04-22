@@ -31,7 +31,7 @@ export default function FloatingButtons() {
   });
 
   return (
-    <FadeIn delay={2.2} move={false}>
+    <FadeIn delay={1.8} movement={false} animateOnVisible={false}>
       <Box sx={floatingBoxStyle}>
         {buttons}
         <Box sx={lineStyle} />

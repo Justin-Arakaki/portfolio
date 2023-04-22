@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SxProps, Theme, Drawer } from '@mui/material';
 import HamburgerButton from './HamburgerButton';
 import NavStack from './NavStack';
+import FadeIn from '../animations/FadeIn';
 
 export default function CustyDrawer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,9 @@ export default function CustyDrawer() {
 
   return (
     <>
-      <HamburgerButton onClick={handleDrawerOpen} />
+      <FadeIn delay={0.5} animateOnVisible={false}>
+        <HamburgerButton onClick={handleDrawerOpen} />
+      </FadeIn>
       <Drawer
         variant="temporary"
         anchor="right"

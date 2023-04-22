@@ -1,6 +1,6 @@
 import { Box, SxProps, Theme, Typography, useTheme } from '@mui/material';
 import { sectionStyle } from './sectionStyles';
-import FadeInOnScroll from '../animations/FadeInOnScroll';
+import FadeIn from '../animations/FadeIn';
 
 interface SectionProps {
   id: string;
@@ -22,7 +22,7 @@ export default function Section({
 
   const title =
     pageNum && label ? (
-      <FadeInOnScroll>
+      <FadeIn>
         <Box display="flex" gap={1} alignItems="flex-end" mb={2}>
           <Typography variant="h4" color="secondary">
             {pageNum}.
@@ -31,15 +31,13 @@ export default function Section({
             {label}
           </Typography>
         </Box>
-      </FadeInOnScroll>
+      </FadeIn>
     ) : null;
 
   return (
-    // <FadeInOnScroll>
     <Box id={id} sx={customSectionStyle}>
       {title}
       {children}
     </Box>
-    // </FadeInOnScroll>
   );
 }

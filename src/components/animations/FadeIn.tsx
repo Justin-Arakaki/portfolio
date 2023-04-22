@@ -1,22 +1,39 @@
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 export interface FadeInProps {
   delay?: number;
   duration?: number;
-  move?: boolean;
+  movement?: boolean;
+  animateOnVisible?: boolean;
   children: React.ReactNode;
 }
 
 export default function FadeIn({
   children,
   delay = 0,
-  move = true,
+  movement = true,
+  animateOnVisible = true,
   duration = 0.5,
 }: FadeInProps) {
+  const ref = useRef(null);
+  const isVisible = useInView(ref, { margin: '-200px' });
+
+  const variants = {
+    hidden: { opacity: 0, translateY: movement ? -10 : 0 },
+    visible: { opacity: 1, translateY: 0 },
+  };
+  let animate = 'visible';
+  if (animateOnVisible) {
+    animate = isVisible ? 'visible' : 'hidden';
+  }
+
   return (
     <motion.div
-      initial={{ opacity: 0, translateY: move ? -10 : 0 }}
-      animate={{ opacity: 1, translateY: 0 }}
+      ref={animateOnVisible ? ref : null}
+      variants={variants}
+      initial="hidden"
+      animate={animate}
       transition={{ duration, delay }}
     >
       {children}

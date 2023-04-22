@@ -29,7 +29,7 @@ export default function NavButton({
   const buttonStyle = isToggledOn ? toggledStyle : untoggledStyle;
 
   return (
-    <FadeIn delay={delay * 0.1}>
+    <FadeIn delay={delay * 0.1} animateOnVisible={false}>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Typography variant="button" color="secondary" mr="0.25rem">
           {listNo}.
