@@ -29,7 +29,7 @@ export default function Header() {
     <ElevationScroll>
       <AppBar sx={appBarStyle}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <FadeIn animateOnVisible={false}>
+          <FadeIn delay={0.5} animateOnVisible={false}>
             <Typography variant="h3" color="primary">
               just_
             </Typography>
