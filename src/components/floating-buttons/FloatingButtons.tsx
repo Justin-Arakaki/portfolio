@@ -2,10 +2,11 @@ import { Box, IconButton } from '@mui/material';
 import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 import {
-  iconStyle,
   floatingBoxStyle,
+  iconStyle,
   lineStyle,
 } from './floatingButtonsStyles';
+import FadeIn from '../animations/FadeIn';
 
 export default function FloatingButtons() {
   const { pages, windowBp: windowBreakpoints } = useSiteData();
@@ -30,9 +31,11 @@ export default function FloatingButtons() {
   });
 
   return (
-    <Box sx={floatingBoxStyle}>
-      {buttons}
-      <Box sx={lineStyle} />
-    </Box>
+    <FadeIn delay={2.2} move={false}>
+      <Box sx={floatingBoxStyle}>
+        {buttons}
+        <Box sx={lineStyle} />
+      </Box>
+    </FadeIn>
   );
 }

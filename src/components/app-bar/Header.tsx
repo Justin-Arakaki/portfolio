@@ -1,13 +1,5 @@
-import { motion } from 'framer-motion';
 import hexRgb from 'hex-rgb';
-import {
-  AppBar,
-  SxProps,
-  Theme,
-  Toolbar,
-  Typography,
-  Button,
-} from '@mui/material';
+import { AppBar, SxProps, Theme, Toolbar, Typography } from '@mui/material';
 import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 import CustyDrawer from './CustyDrawer';
