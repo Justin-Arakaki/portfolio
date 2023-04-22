@@ -27,7 +27,7 @@ export default function CustyDrawer() {
 
   return (
     <>
-      <FadeIn delay={0.5} animateOnVisible={false}>
+      <FadeIn delay={0.7} animateOnVisible={false}>
         <HamburgerButton onClick={handleDrawerOpen} />
       </FadeIn>
       <Drawer

@@ -1,4 +1,6 @@
 import { Box, ButtonBase, SxProps, Theme, Typography } from '@mui/material';
+import { useSiteData } from '../../contexts/SiteDataContext';
+import { useWindow } from '../../contexts/WindowContext';
 import FadeIn from '../animations/FadeIn';
 
 interface ButtonProps {
@@ -18,6 +20,11 @@ export default function NavButton({
   isToggledOn,
   handleClose,
 }: ButtonProps) {
+  const { drawerBp } = useSiteData().windowBp;
+  const windowWidth = useWindow();
+  const isLargeWindow = windowWidth > drawerBp;
+
+  const delayConst = isLargeWindow ? 0.5 : 0;
   const hashLink = `#${link}`;
   const toggledStyle: SxProps<Theme> = {
     color: 'primary.main',
@@ -29,7 +36,7 @@ export default function NavButton({
   const buttonStyle = isToggledOn ? toggledStyle : untoggledStyle;
 
   return (
-    <FadeIn delay={0.5 + delay * 0.1} animateOnVisible={false}>
+    <FadeIn delay={delayConst + delay * 0.1} animateOnVisible={false}>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Typography variant="button" color="secondary" mr="0.25rem">
           {listNo}.
