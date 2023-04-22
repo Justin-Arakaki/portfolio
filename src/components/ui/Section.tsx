@@ -22,22 +22,22 @@ export default function Section({
 
   const title =
     pageNum && label ? (
-      <FadeIn>
-        <Box display="flex" gap={1} alignItems="flex-end" mb={2}>
-          <Typography variant="h4" color="secondary">
-            {pageNum}.
-          </Typography>
-          <Typography variant="h3" color="primary">
-            {label}
-          </Typography>
-        </Box>
-      </FadeIn>
+      <Box display="flex" gap={1} alignItems="flex-end" mb={2}>
+        <Typography variant="h4" color="secondary">
+          {pageNum}.
+        </Typography>
+        <Typography variant="h3" color="primary">
+          {label}
+        </Typography>
+      </Box>
     ) : null;
 
   return (
-    <Box id={id} sx={customSectionStyle}>
-      {title}
-      {children}
-    </Box>
+    <FadeIn duration={1}>
+      <Box id={id} sx={customSectionStyle}>
+        {title}
+        {children}
+      </Box>
+    </FadeIn>
   );
 }

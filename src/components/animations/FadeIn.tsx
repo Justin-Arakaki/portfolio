@@ -17,7 +17,7 @@ export default function FadeIn({
   duration = 0.5,
 }: FadeInProps) {
   const ref = useRef(null);
-  const isVisible = useInView(ref, { margin: '-200px' });
+  const isVisible = useInView(ref, { margin: '-40%' });
 
   const variants = {
     hidden: { opacity: 0, translateY: movement ? -10 : 0 },
