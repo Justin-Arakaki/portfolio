@@ -8,7 +8,10 @@ interface IntersectionOptionsProps {
 
 export default function useIntersection(
   ref: RefObject<Element>,
-  options: IntersectionOptionsProps
+  options: IntersectionOptionsProps = {
+    rootMargin: '10px 10px',
+    threshold: 1,
+  }
 ) {
   const [isVisible, setIsVisible] = useState(false);
 

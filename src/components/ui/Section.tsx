@@ -1,4 +1,6 @@
-import { Box, Typography, SxProps, Theme, useTheme } from '@mui/material';
+import { Box, SxProps, Theme, Typography, useTheme } from '@mui/material';
+import { sectionStyle } from './sectionStyles';
+import FadeInOnScroll from '../animations/FadeInOnScroll';
 
 interface SectionProps {
   id: string;
@@ -16,31 +18,28 @@ export default function Section({
   sx: sx,
 }: SectionProps) {
   const theme = useTheme();
-  const sectionStyle: SxProps<Theme> = {
-    width: '100%',
-    paddingTop: '12vh',
-    paddingBottom: '33vh',
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: '4rem',
-      paddingBottom: 0,
-    },
-    ...sx,
-  };
+  const customSectionStyle = { ...sectionStyle(theme), ...sx };
+
   const title =
     pageNum && label ? (
-      <Box display="flex" gap={1} alignItems="flex-end" mb={2}>
-        <Typography variant="h4" color="secondary">
-          {pageNum}.
-        </Typography>
-        <Typography variant="h3" color="primary">
-          {label}
-        </Typography>
-      </Box>
+      <FadeInOnScroll>
+        <Box display="flex" gap={1} alignItems="flex-end" mb={2}>
+          <Typography variant="h4" color="secondary">
+            {pageNum}.
+          </Typography>
+          <Typography variant="h3" color="primary">
+            {label}
+          </Typography>
+        </Box>
+      </FadeInOnScroll>
     ) : null;
+
   return (
-    <Box id={id} sx={sectionStyle}>
+    // <FadeInOnScroll>
+    <Box id={id} sx={customSectionStyle}>
       {title}
       {children}
     </Box>
+    // </FadeInOnScroll>
   );
 }

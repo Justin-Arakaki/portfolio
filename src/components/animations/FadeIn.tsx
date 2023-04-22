@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-interface FadeInProps {
+export interface FadeInProps {
   delay?: number;
   duration?: number;
   move?: boolean;

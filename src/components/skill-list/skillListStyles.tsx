@@ -3,7 +3,7 @@ import { SxProps, Theme } from '@mui/material';
 import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 
-export const skillItem: SxProps<Theme> = (theme) => {
+export const skillItem: SxProps<Theme> = () => {
   const windowWidth = useWindow();
   const { skillItemBp } = useSiteData().windowBp;
   const isLargeWindow = windowWidth > skillItemBp;
@@ -37,7 +37,7 @@ export const skillContainerStyle: SxProps<Theme> = {
   justifyContent: 'space-between',
 };
 
-export const dividerStyle: SxProps<Theme> = (theme) => ({
+export const dividerStyle: SxProps<Theme> = () => ({
   marginBottom: '1rem',
   '&::before, &::after': {
     borderColor: 'text.secondary',
