@@ -2,6 +2,7 @@ import bootstrapIcon from '../assets/icons/bootstrap-icon.svg';
 import cssIcon from '../assets/icons/css-icon.svg';
 import ec2Icon from '../assets/icons/ec2-icon.svg';
 import expressJsIcon from '../assets/icons/expressjs-icon.svg';
+import framerMotionIcon from '../assets/icons/framer-motion-icon.svg';
 import htmlIcon from '../assets/icons/html-icon.svg';
 import javascriptIcon from '../assets/icons/javascript-icon.svg';
 import jestIcon from '../assets/icons/jest-icon.svg';
@@ -27,6 +28,7 @@ const skillsData = {
       { name: 'CSS3', icon: cssIcon, strength: 2 },
       { name: 'TypeScript', icon: typescriptIcon, strength: 1 },
       { name: 'React', icon: reactJsIcon, strength: 1 },
+      { name: 'Framer Motion', icon: framerMotionIcon, strength: 1 },
       { name: 'Material-UI', icon: materialUiIcon, strength: 1 },
       { name: 'Bootstrap', icon: bootstrapIcon, strength: 1 },
       { name: 'Jest', icon: jestIcon, strength: 1 },

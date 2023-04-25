@@ -6,16 +6,29 @@ import { useWindow } from '../../contexts/WindowContext';
 export const skillItem: SxProps<Theme> = () => {
   const windowWidth = useWindow();
   const { skillItemBp } = useSiteData().windowBp;
-  const isLargeWindow = windowWidth > skillItemBp;
+  const isLargeWindow = windowWidth > skillItemBp[1];
+  const isSmallWindow = windowWidth < skillItemBp[0];
 
+  let width;
+  switch (true) {
+    case isLargeWindow:
+      width = '30%';
+      break;
+    case isSmallWindow:
+      width = '100%';
+      break;
+    default:
+      width = '50%';
+      break;
+  }
   return {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: isLargeWindow ? '1rem' : '0.5rem',
+    gap: isLargeWindow ? '1rem' : '0.3rem',
     height: 40,
-    width: isLargeWindow ? '30%' : '48%',
-    minWidth: 145,
+    width: width,
+    minWidth: 140,
   };
 };
 
