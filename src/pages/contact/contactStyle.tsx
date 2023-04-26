@@ -12,7 +12,7 @@ export const socialsWrapperStyle: SxProps<Theme> = {
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
-  gap: '3rem',
+  gap: '2rem',
   marginTop: '4rem',
 };
 

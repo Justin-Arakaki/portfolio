@@ -1,4 +1,4 @@
-import { Box, IconButton } from '@mui/material';
+import { Box, IconButton, Tooltip } from '@mui/material';
 import { useSiteData } from '../../contexts/SiteDataContext';
 import { useWindow } from '../../contexts/WindowContext';
 import {
@@ -9,24 +9,26 @@ import {
 import FadeIn from '../animations/FadeIn';
 
 export default function FloatingButtons() {
-  const { pages, windowBp: windowBreakpoints } = useSiteData();
+  const { pages, windowBp } = useSiteData();
   const { socials } = pages.contact;
   const windowWidth = useWindow();
 
-  if (windowWidth < windowBreakpoints.floatingButtonsBp) return null;
+  if (windowWidth < windowBp.floatingButtonsBp) return null;
 
   const buttons = socials.map((info, index) => {
     const SocialIcon = info.icon;
 
     return (
-      <IconButton
-        disableRipple
-        aria-label={info.title}
-        href={info.link}
-        key={index}
-      >
-        <SocialIcon sx={iconStyle} />
-      </IconButton>
+      <Tooltip title={info.title} placement="left">
+        <IconButton
+          disableRipple
+          aria-label={info.title}
+          href={info.link}
+          key={index}
+        >
+          <SocialIcon sx={iconStyle} />
+        </IconButton>
+      </Tooltip>
     );
   });
 

@@ -1,7 +1,7 @@
 const aboutmeData = {
   link: 'aboutme',
   pageNum: 1,
-  label: 'About Me',
+  label: 'Welcome',
   content: {
     name: 'Justin Arakaki',
     greeting: 'Hi there, my name is_',
