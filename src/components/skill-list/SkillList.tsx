@@ -30,7 +30,7 @@ export default function SkillsList({ skills, header }: SkillsListProps) {
           <ReactSVG
             src={svgIcon}
             beforeInjection={(svg) => {
-              svg.setAttribute('style', 'width: 22; height: 22;');
+              svg.setAttribute('style', 'width: 22px; height: 22px;');
             }}
           />
         </Box>
