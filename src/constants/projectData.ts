@@ -12,14 +12,6 @@ const projectData = {
   },
   list: [
     {
-      title: 'Job Market Analyzer',
-      description:
-        'Indeed web scraper that searches popular skills in job listings',
-      image: jobMarketAnalyzerPic,
-      ghUrl: 'https://github.com/Justin-Arakaki/job-market-analyzer',
-      technologies: ['Puppeteer', 'TypeScript', 'TSnode', 'Node.js'],
-    },
-    {
       title: 'TrueStream',
       description:
         'Fullstack web app that tracks user media streaming subscriptions',
@@ -52,6 +44,14 @@ const projectData = {
       demoUrl: 'https://justin-arakaki.github.io/anicritic/',
       ghUrl: 'https://github.com/Justin-Arakaki/anicritic',
       technologies: ['JavaScript', 'AJAX', 'JikanAPI'],
+    },
+    {
+      title: 'Indeed Scraper',
+      description:
+        'Indeed web scraper that searches popular skills in job listings',
+      image: jobMarketAnalyzerPic,
+      ghUrl: 'https://github.com/Justin-Arakaki/job-market-analyzer',
+      technologies: ['Puppeteer', 'TypeScript', 'TSnode', 'Node.js'],
     },
   ],
 };

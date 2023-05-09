@@ -8,6 +8,7 @@ import javascriptIcon from '../assets/icons/javascript-icon.svg';
 import jestIcon from '../assets/icons/jest-icon.svg';
 import materialUiIcon from '../assets/icons/material-ui-icon.svg';
 import nodeJsIcon from '../assets/icons/nodejs-icon.svg';
+import phpIcon from '../assets/icons/php-icon.svg';
 import postgreSqlIcon from '../assets/icons/postgresql-icon.svg';
 import puppeteerIcon from '../assets/icons/puppeteer-icon.svg';
 import reactJsIcon from '../assets/icons/reactjs-icon.svg';
@@ -37,6 +38,7 @@ const skillsData = {
     ],
     backend: [
       { name: 'Node.js', icon: nodeJsIcon, strength: 1 },
+      { name: 'PHP', icon: phpIcon, strength: 1 },
       { name: 'SQL', icon: sqlIcon, strength: 1 },
       { name: 'Express.js', icon: expressJsIcon, strength: 1 },
       { name: 'PostgreSQL', icon: postgreSqlIcon, strength: 1 },
