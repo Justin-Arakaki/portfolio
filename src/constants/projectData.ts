@@ -48,9 +48,9 @@ const projectData = {
     {
       title: 'Indeed Scraper',
       description:
-        'Indeed web scraper that searches popular skills in job listings',
+        'Indeed web scraper that searches tech skills in job listings',
       image: jobMarketAnalyzerPic,
-      ghUrl: 'https://github.com/Justin-Arakaki/job-market-analyzer',
+      ghUrl: 'https://github.com/Justin-Arakaki/indeed-scraper',
       technologies: ['Puppeteer', 'TypeScript', 'TSnode', 'Node.js'],
     },
   ],
