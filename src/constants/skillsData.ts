@@ -1,5 +1,6 @@
 import bootstrapIcon from '../assets/icons/bootstrap-icon.svg';
 import cssIcon from '../assets/icons/css-icon.svg';
+import dockerIcon from '../assets/icons/docker-icon.svg';
 import ec2Icon from '../assets/icons/ec2-icon.svg';
 import expressJsIcon from '../assets/icons/expressjs-icon.svg';
 import framerMotionIcon from '../assets/icons/framer-motion-icon.svg';
@@ -7,11 +8,14 @@ import htmlIcon from '../assets/icons/html-icon.svg';
 import javascriptIcon from '../assets/icons/javascript-icon.svg';
 import jestIcon from '../assets/icons/jest-icon.svg';
 import materialUiIcon from '../assets/icons/material-ui-icon.svg';
+import mysqlIcon from '../assets/icons/mysql-icon.svg';
 import nodeJsIcon from '../assets/icons/nodejs-icon.svg';
 import phpIcon from '../assets/icons/php-icon.svg';
 import postgreSqlIcon from '../assets/icons/postgresql-icon.svg';
 import puppeteerIcon from '../assets/icons/puppeteer-icon.svg';
+import rdsIcon from '../assets/icons/rds-icon.svg';
 import reactJsIcon from '../assets/icons/reactjs-icon.svg';
+import redisIcon from '../assets/icons/redis-icon.svg';
 import sqlIcon from '../assets/icons/sql-icon.svg';
 import typescriptIcon from '../assets/icons/typescript-icon.svg';
 import viteIcon from '../assets/icons/vite-icon.svg';
@@ -41,8 +45,12 @@ const skillsData = {
       { name: 'PHP', icon: phpIcon, strength: 1 },
       { name: 'SQL', icon: sqlIcon, strength: 1 },
       { name: 'Express.js', icon: expressJsIcon, strength: 1 },
+      { name: 'Redis', icon: redisIcon, strength: 1 },
       { name: 'PostgreSQL', icon: postgreSqlIcon, strength: 1 },
+      { name: 'MySql', icon: mysqlIcon, strength: 1 },
+      { name: 'Docker', icon: dockerIcon, strength: 1 },
       { name: 'Puppeteer', icon: puppeteerIcon, strength: 1 },
+      { name: 'AWS RDS', icon: rdsIcon, strength: 1 },
       { name: 'AWS EC2', icon: ec2Icon, strength: 1 },
     ],
   },
