@@ -1,5 +1,6 @@
 import aniCriticPic from '../assets/images/anicritic.png';
 import jobMarketAnalyzerPic from '../assets/images/job-market-analyzer.png';
+import quackchatPic from '../assets/images/quackchat.png';
 import truestreamPic from '../assets/images/truestream.png';
 import yoshinagaPortfolioPic from '../assets/images/yoshinaga-portfolio.png';
 
@@ -25,6 +26,14 @@ const projectData = {
         'React.js',
         'Material-ui',
       ],
+    },
+    {
+      title: 'QuackChat',
+      description:
+        'Backend API that powers a chat application with Discord-like features',
+      image: quackchatPic,
+      ghUrl: 'https://github.com/Justin-Arakaki/quackchat',
+      technologies: ['Express.js', 'MySQL', 'Redis', 'Sequelize ORM', 'Docker'],
     },
     {
       title: 'Yoshinaga Portfolio',
