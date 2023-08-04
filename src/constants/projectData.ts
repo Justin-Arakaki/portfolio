@@ -1,5 +1,6 @@
 import aniCriticPic from '../assets/images/anicritic.png';
-import jobMarketAnalyzerPic from '../assets/images/job-market-analyzer.png';
+import awsProjectPic from '../assets/images/aws-project.png';
+// import jobMarketAnalyzerPic from '../assets/images/job-market-analyzer.png';
 import quackchatPic from '../assets/images/quackchat.png';
 import truestreamPic from '../assets/images/truestream.png';
 import yoshinagaPortfolioPic from '../assets/images/yoshinaga-portfolio.png';
@@ -28,12 +29,19 @@ const projectData = {
       ],
     },
     {
-      title: 'QuackChat',
+      title: 'QuickChat',
       description:
         'Backend API that powers a chat application with Discord-like features',
       image: quackchatPic,
-      ghUrl: 'https://github.com/Justin-Arakaki/quackchat',
+      ghUrl: 'https://github.com/Justin-Arakaki/quickchat',
       technologies: ['Express.js', 'MySQL', 'Redis', 'Sequelize ORM', 'Docker'],
+    },
+    {
+      title: 'AWS Contact Form',
+      description: 'A backend serverless API that processes contact forms',
+      image: awsProjectPic,
+      ghUrl: 'https://github.com/Justin-Arakaki/quickchat',
+      technologies: ['AWS Lambda', 'AWS RDS', 'AWS API Gateway'],
     },
     {
       title: 'Yoshinaga Portfolio',
@@ -54,14 +62,14 @@ const projectData = {
       ghUrl: 'https://github.com/Justin-Arakaki/anicritic',
       technologies: ['JavaScript', 'AJAX', 'JikanAPI'],
     },
-    {
-      title: 'Indeed Scraper',
-      description:
-        'Indeed web scraper that searches tech skills in job listings',
-      image: jobMarketAnalyzerPic,
-      ghUrl: 'https://github.com/Justin-Arakaki/indeed-scraper',
-      technologies: ['Puppeteer', 'TypeScript', 'TSnode', 'Node.js'],
-    },
+    // {
+    //   title: 'Indeed Scraper',
+    //   description:
+    //     'Indeed web scraper that searches tech skills in job listings',
+    //   image: jobMarketAnalyzerPic,
+    //   ghUrl: 'https://github.com/Justin-Arakaki/indeed-scraper',
+    //   technologies: ['Puppeteer', 'TypeScript', 'TSnode', 'Node.js'],
+    // },
   ],
 };
 

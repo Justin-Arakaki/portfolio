@@ -1,3 +1,4 @@
+import apiGatewayIcon from '../assets/icons/api-gateway-icon.svg';
 import bootstrapIcon from '../assets/icons/bootstrap-icon.svg';
 import cssIcon from '../assets/icons/css-icon.svg';
 import dockerIcon from '../assets/icons/docker-icon.svg';
@@ -7,6 +8,7 @@ import framerMotionIcon from '../assets/icons/framer-motion-icon.svg';
 import htmlIcon from '../assets/icons/html-icon.svg';
 import javascriptIcon from '../assets/icons/javascript-icon.svg';
 import jestIcon from '../assets/icons/jest-icon.svg';
+import lambdaIcon from '../assets/icons/lambda-icon.svg';
 import materialUiIcon from '../assets/icons/material-ui-icon.svg';
 import mysqlIcon from '../assets/icons/mysql-icon.svg';
 import nodeJsIcon from '../assets/icons/nodejs-icon.svg';
@@ -50,7 +52,9 @@ const skillsData = {
       { name: 'MySql', icon: mysqlIcon, strength: 1 },
       { name: 'Docker', icon: dockerIcon, strength: 1 },
       { name: 'Puppeteer', icon: puppeteerIcon, strength: 1 },
+      { name: 'AWS Lambda', icon: lambdaIcon, strength: 1 },
       { name: 'AWS RDS', icon: rdsIcon, strength: 1 },
+      { name: 'AWS API Gateway', icon: apiGatewayIcon, strength: 1 },
       { name: 'AWS EC2', icon: ec2Icon, strength: 1 },
     ],
   },
