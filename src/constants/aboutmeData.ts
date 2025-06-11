@@ -7,7 +7,7 @@ const aboutmeData = {
     greeting: 'Hi there, my name is_',
     title: 'a software developer.',
     about:
-      'I make shiny, helpful stuff. I like exploring new technologies and solving problems through code.',
+      'I make helpful stuff. I like exploring new technologies and solving problems through code.',
   },
 };
 
